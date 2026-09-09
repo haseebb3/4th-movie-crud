@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+:root {
+  --primary-color: rgb(229, 9, 20);
+  --primary-hover-color: rgb(193, 17, 25);
+  --sec-color: #212529;
+  --sec-hover-color : #121416;
+  --color-white: #fff;
+}
+
+.primary-btn{
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+
+.primary-btn:hover{
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+
+.secondary-btn{
+  background-color: var(--sec-color);
+  color: var(--color-white);
+}
+
+.secondary-btn:hover{
+  background-color: var(--sec-hover-color);
+  color: var(--color-white);
+}
+
+body{
+  min-height: 100vh;
+  position: relative;
+}
+
+body:before{
+  content: "";
+  background-image: radial-gradient(
+    circle,
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.6) 50%,
+    rgba(0,0,0,0.7) 100%
+  ),url("../images/backgroundImage.jpg");
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+}
+
+.header-section img{
+  width: 200px;
+  display: inline-block;
+}
+
+.cardContainer{
+  background-color: rgba(0,0,0,0.7);
+  color: var(--color-white);
+  transition: all 0.3s ease-out;
+}
+.cardContainer:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 4px 1px var(--color-white);
+}
+
+.cardContainer .movieTitle{
+  color: var(--color-white);
+}
+
+.movieTitle{
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  height: 40px;
+}
+
+.cardContainer figure{
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+.cardContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContainer figcaption{
+  position: absolute;
+  top: 30%;
+  overflow: auto;
+  left : 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: rgba(0,0,0,0.8);
+  transform: translateY(115%);
+  transition: all 0.4s ease-in;
+}
+
+.cardContainer:hover figcaption,
+.cardContainer:focus figcaption,
+.cardContainer:active figcaption{
+  transform: translateY(0);
+}
+
+.backDrop{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  cursor: pointer;
+  display: none;
+}
+
+.backDrop.active{
+  display: block;
+}
+
+.modelModel{
+  position: absolute;
+  top: 5%;
+  left:20%;
+  width: 60%;
+  transition: all 0.7s linear;
+  display: none;
+}
+
+.modelModel.active{
+  display: block;
+  animation: slideUp 0.7s ease-in;
+}
+
+@keyframes slideUp{
+  0% {
+    opacity: 0;
+    transform: translateY(115%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
