@@ -230,7 +230,7 @@ function onMovieUpdateHandler() {
               <button onclick="onMovieEditHandler(this)" class="btn btn-sm secondary-btn" id="editBtn">Edit</button>
               <button onclick="onMovieDeleteHandler(this)" class="btn btn-sm primary-btn" id="deleteBtn">Delete</button>
             </div>
-          </div>updatedObj
+          </div>
   `;
   addMovieBtn.classList.remove("d-none");
   updateMovieBtn.classList.add("d-none");
