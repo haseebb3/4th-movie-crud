@@ -273,6 +273,8 @@ function onModelToggler() {
   movieRating;
   backDrop.classList.toggle("active");
   movieForm.reset();
+  addMovieBtn.classList.remove("d-none");
+  updateMovieBtn.classList.add("d-none");
 }
 
 showModelBtn.addEventListener("click", onModelToggler);
